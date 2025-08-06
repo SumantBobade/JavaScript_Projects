@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body bgcolor="black">
+    <ul class="mylist">
+
+    </ul>
+</body>
+<script>
+    function addLanguage(LangName){
+        const li = document.createElement('li');
+        li.innerText = `${LangName}`;
+        li.style.color='white'
+        document.querySelector('.mylist').appendChild(li);
+    }
+
+    addLanguage("Python");
+    addLanguage("Java");
+    addLanguage("C++");
+
+    function addOptiLanguage(LangName){
+        
+        const li= document.createElement('li');
+        const textNode = document.createTextNode(LangName);
+        li.appendChild(textNode);
+        li.style.color='white'
+        document.querySelector('.mylist').appendChild(li);
+    }
+
+    addOptiLanguage("goLang");
+
+    //Edit 
+    const secondLang = document.querySelector("li:nth-child(2)")
+
+    // SecondLang.innerHTML = "Mojo";
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    newli.style.color = 'white';
+    secondLang.replaceWith(newli);
+
+</script>
+</html>
